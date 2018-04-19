@@ -11,3 +11,15 @@ class add_item{
 public:
     bool add(std::string taskname,std::string description,std::string duedate);
 };
+bool add_item::add(std::string taskname,std::string description,std::string duedate){
+    if(size<MAX_size){
+        mytodolist[size].description=description;
+        mytodolist[size].duedate=duedate;
+        mytodolist[size].taskname=taskname;
+        size++;
+        return true;
+    }
+    else{
+        return false;
+    }
+}
